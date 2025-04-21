@@ -31,7 +31,7 @@
 
   // UNREAD BAR
   #{c(sidebar server unreadBar bottom)},
-  #{c(sidebar server unreadBar old bottom)}  {
+  #{c(sidebar server unreadBar old bottom)} {
     bottom: 8px;
   }
   #{c(sidebar server unreadBar bar)},
@@ -114,11 +114,9 @@
   &#{c(sidebar server channels unread)} {
     #{c(sidebar server channels name)} {
       color: var(--channel-unread);
-      text-shadow: 0 0 3px;
     }
     #{c(sidebar server channels icon)} {
       color: var(--channel-unread);
-      filter: drop-shadow(0 0 3px);
     }
     &:hover {
       :is(#{c(sidebar server channels name)}, #{c(sidebar server channels icon)}) {
@@ -183,7 +181,9 @@
     transition: all 0.15s ease-in-out;
   }
   #{c(sidebar server channels voice avatarSpeaking)} {
-    box-shadow: 0 0 0 2px cv('color.main'), inset 0 0 3px rgba(0, 0, 0, 0.5);
+    box-shadow:
+      0 0 0 2px cv('color.main'),
+      inset 0 0 3px rgba(0, 0, 0, 0.5);
     position: relative;
     transition: all 0.1s ease-in-out;
     &:after {
@@ -195,7 +195,9 @@
       height: 1.8em;
       background: linear-gradient(to right, cv('color.main') 10%, transparent);
       opacity: 0.5;
-      transition: all 0.1s ease-in-out, width 0.15s ease-in-out;
+      transition:
+        all 0.1s ease-in-out,
+        width 0.15s ease-in-out;
       pointer-events: none;
       z-index: -1;
       border-radius: 999px;
